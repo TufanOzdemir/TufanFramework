@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using TufanFramework.Core.Authentication;
 
-namespace CommonService.Test.UI.Controllers
+namespace TufanFramework.Test.UI.Controllers
 {
     public class AuthorizationTestController : Controller
     {
