@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TufanFramework.Core", "TufanFramework.Core\TufanFramework.Core.csproj", "{5639819E-F297-45B7-8A54-FCBDBA6C7173}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonService.Test.UI", "CommonService.Test.UI\CommonService.Test.UI.csproj", "{24EBF962-25BD-4444-A0CD-F881DDA028A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5639819E-F297-45B7-8A54-FCBDBA6C7173}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5639819E-F297-45B7-8A54-FCBDBA6C7173}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5639819E-F297-45B7-8A54-FCBDBA6C7173}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5639819E-F297-45B7-8A54-FCBDBA6C7173}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24EBF962-25BD-4444-A0CD-F881DDA028A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24EBF962-25BD-4444-A0CD-F881DDA028A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24EBF962-25BD-4444-A0CD-F881DDA028A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24EBF962-25BD-4444-A0CD-F881DDA028A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CE8C34A5-AAA0-4F78-B23D-A95E5222D4C8}
+	EndGlobalSection
+EndGlobal
