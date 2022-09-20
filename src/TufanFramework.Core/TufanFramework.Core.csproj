@@ -7,7 +7,7 @@
     <Description>This project is a framework for .net projects</Description>
     <Copyright>Ebird</Copyright>
     <Product>TufanFramework.Core</Product>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <PackageProjectUrl>https://github.com/TufanOzdemir/TufanFramework</PackageProjectUrl>
     <RepositoryUrl>https://github.com/TufanOzdemir/TufanFramework</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>

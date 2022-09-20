@@ -11,7 +11,7 @@ namespace TufanFramework.Core.AdapterPortRegistrator
             classProvider.Register(master, slave, interfaceType);
             foreach (var item in classProvider.RegisteredClassDictionary)
             {
-                services.AddSingleton(item.Key, item.Value);
+                services.AddScoped(item.Key, item.Value);
             }
         }
     }
