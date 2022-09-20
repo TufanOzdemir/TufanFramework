@@ -23,6 +23,12 @@ jobs:
       run: dotnet restore src
     - name: Build
       run: dotnet build --configuration Release --no-restore src
+    - name: Setup .NET @ Latest
+      uses: actions/setup-dotnet@v2
+      with:
+        source-url: https://api.nuget.org/v3/index.json
+      env:
+        NUGET_AUTH_TOKEN: ${{secrets.NUGET_SECRET}}  
     - name: Build solution and generate NuGet package
       run: |  
         cd src
