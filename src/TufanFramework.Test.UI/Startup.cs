@@ -9,6 +9,7 @@ using Microsoft.OpenApi.Models;
 using TufanFramework.Common.Exception;
 using TufanFramework.Core.Logging;
 using TufanFramework.Common.Log;
+using TufanFramework.Core.Swagger;
 
 namespace TufanFramework.Test.UI
 {
@@ -29,7 +30,7 @@ namespace TufanFramework.Test.UI
             var configResolver = new ConfigResolver(Configuration);
             services.AddSingleton<IConfigResolver>(configResolver);
             services.AddSecurity(configResolver);
-            AddSwagger(services);
+            services.AddSwaggerWithJWT();
             services.AddSingleton<ILogService, NLogService>();
         }
 
@@ -67,32 +68,6 @@ namespace TufanFramework.Test.UI
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-            });
-        }
-
-        private void AddSwagger(IServiceCollection services)
-        {
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
-                c.AddSecurityDefinition("Bearer",
-                       new OpenApiSecurityScheme
-                       {
-                           Name = "Authorization",
-                           Type = SecuritySchemeType.ApiKey,
-                           Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
-                           In = ParameterLocation.Header
-                       });
-                c.AddSecurityRequirement(new OpenApiSecurityRequirement
-                {
-                    {
-                        new OpenApiSecurityScheme
-                        {
-                            Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "Bearer" }
-                        },
-                        new[] { "" }
-                    }
-                });
             });
         }
     }

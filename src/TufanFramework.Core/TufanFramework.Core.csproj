@@ -2,15 +2,24 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <Authors>Ebird Dev Team</Authors>
+    <Authors>TufanOzdemir</Authors>
     <Company>Ebird</Company>
-    <Description>This project use for microservices.</Description>
+    <Description>This project is a framework for .net projects</Description>
     <Copyright>Ebird</Copyright>
-    <Product>Ebird.TufanFramework.Core</Product>
-    <Version>1.0.6</Version>
+    <Product>TufanFramework.Core</Product>
+    <Version>1.0.2</Version>
     <PackageProjectUrl>https://github.com/TufanOzdemir/TufanFramework</PackageProjectUrl>
     <RepositoryUrl>https://github.com/TufanOzdemir/TufanFramework</RepositoryUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="11.2.1" />
@@ -27,6 +36,8 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="NLog" Version="5.0.4" />
     <PackageReference Include="NLog.Web.AspNetCore" Version="5.1.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.4.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.4.0" />
   </ItemGroup>
 
 </Project>

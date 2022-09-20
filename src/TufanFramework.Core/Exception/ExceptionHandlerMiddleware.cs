@@ -31,14 +31,14 @@ namespace TufanFramework.Common.Exception
             {
                 await _next(context);
             }
-            catch (UnauthorizedAccessException)
+            catch (UnauthorizedAccessException ex)
             {
-                var exModel = new GeneralError { Message = "Not Authenticated", Status = HttpStatusCode.Unauthorized };
+                var exModel = new GeneralError { Message = ex.Message, Status = HttpStatusCode.Unauthorized };
                 await ContextDecorator(context, exModel);
             }
-            catch (AuthenticationException)
+            catch (AuthenticationException ex)
             {
-                var exModel = new GeneralError { Message = "Not Authorized", Status = HttpStatusCode.Forbidden };
+                var exModel = new GeneralError { Message = ex.Message, Status = HttpStatusCode.Forbidden };
                 await ContextDecorator(context, exModel);
             }
             catch (ValidationException ex)
