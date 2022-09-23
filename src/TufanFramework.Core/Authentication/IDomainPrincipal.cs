@@ -9,6 +9,7 @@ namespace TufanFramework.Core.Authentication
     public interface IDomainPrincipal : IPrincipal
     {
         int Id { get; }
+        string strId { get; }
         string Name { get; }
         string FirstName { get; }
         string LastName { get; }

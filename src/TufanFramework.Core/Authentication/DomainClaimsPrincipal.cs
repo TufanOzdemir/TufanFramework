@@ -35,6 +35,14 @@ namespace TufanFramework.Core.Authentication
             }
         }
 
+        public virtual string strId
+        {
+            get
+            {
+                return GetClaim<string>(ClaimTypes.NameIdentifier);
+            }
+        }
+
         public virtual string Name
         {
             get
